@@ -1,73 +1,56 @@
 ---
 import { Image } from "astro:assets";
-import photoperfil from "../../../../public/img/photo-perfil.webp";
+import profilePhoto from "../../../../public/img/photo-perfil.webp";
 ---
 
 <div class="content-presentation">
   <div class="linear-gradient-2"></div>
   <div class="linear-gradient-1"></div>
-  <dir class="container-persentation">
+  <dir class="container-presentation">
     <div class="container-text">
-      <!-- <h2 class="text-hello">Hola <strong>soy</strong></h2> -->
-      <h2 class="text-name">Osnaider Martinez</h2>
+      <!-- <h2 class="text-hello">Hello, I am</h2> -->
+      <h2 class="text-name">Nans Moreno</h2>
       <div class="container-profession">
         <div>
-          <span class="p-profession">D</span>
-          <span class="p-profession">e</span>
-          <span class="p-profession">s</span>
-          <span class="p-profession">a</span>
-          <span class="p-profession">r</span>
-          <span class="p-profession">r</span>
-          <span class="p-profession">o</span>
-          <span class="p-profession">l</span>
-          <span class="p-profession">l</span>
-          <span class="p-profession">a</span>
-          <span class="p-profession">d</span>
-          <span class="p-profession">o</span>
-          <span class="p-profession">r</span>
+          <span class="p-profession">A</span>
+          <span class="p-profession">I</span>
           <span class="">&nbsp;</span>
         </div>
         <div class="">
-          <span class="p-profession">F</span>
-          <span class="p-profession">r</span>
-          <span class="p-profession">o</span>
-          <span class="p-profession">n</span>
-          <span class="p-profession">t</span>
-          <span class="p-profession">-</span>
+          <span class="p-profession">D</span>
           <span class="p-profession">e</span>
-          <span class="p-profession">n</span>
-          <span class="p-profession">d</span>
-          <span class="">&nbsp;</span>
-          <span class="p-profession">J</span>
+          <span class="p-profession">v</span>
+          <span class="p-profession">e</span>
+          <span class="p-profession">l</span>
+          <span class="p-profession">o</span>
+          <span class="p-profession">p</span>
+          <span class="p-profession">e</span>
           <span class="p-profession">r</span>
         </div>
       </div>
       <p class="p-presentation">
-        Con más de 1 año de experiencia en la creación de experiencias web
-        atractivas y funcionales. Experto en tecnologías front-end, incluyendo
-        HTML5, CSS3, JavaScript y frameworks como React, Next.js, Astro. Capaz
-        de traducir diseños creativos en código interactivo y optimizar la
-        velocidad y el rendimiento del sitio web.
+       I am an IT student studying AI development at Laplateforme 
+       <p>in Marseille, France</p>
       </p>
       <div class="container-curriculum">
-        <a href="https://wa.me/+573166026155" target="_blank" class="a-action"
-          >Hablemos</a
+        <a href="https://discordapp.com/users/1311252416653430804" target="_blank" class="a-action"
+          >Let's Talk</a
         >
         <a
-          href="https://drive.google.com/file/d/1VKgzg5L6JUiRx5d3_kOIjIeQRmthdhM2/view?usp=sharing"
+          href="https://drive.google.com/file/d/1L5lXP04vP5ZlLNnQ8bIGPD_nS2HHSTJ_/view?usp=drive_link"
           class="a-curriculum"
-          target="_blank">Ver Currículum</a
+          target="_blank">View Resume</a
         >
       </div>
       <div class="container-social">
-        <p class="">Echa un vistaso a mi</p>
-        <a href="https://github.com/Osnaider19" target="_blank">
+        <p class="">Check out my</p>
+        <a href="https://github.com/nans-moreno" target="_blank">
           <li class="li-social">
             <i class="fa-brands fa-github"></i>
           </li>
         </a>
         <a
-          href="https://www.linkedin.com/in/osnaider-mart%C3%ADnez-154b67256/"
+          href="https://fr.linkedin.com/in/nans-moreno-600a04242"
           target="_blank"
         >
           <li class="li-social">
@@ -77,10 +60,10 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
       </div>
     </div>
     <div class="container-photo-profile">
-      <div class="photo-perfil">
+      <div class="photo-profile">
         <picture>
           {/* If you are not using vercel, place a normal <img> tag */}
-          <Image src={photoperfil} alt="Osnaider Martinez" id="inicio" />
+          <Image src={profilePhoto} alt="Nans Moreno" id="inicio" />
         </picture>
       </div>
     </div>
@@ -88,14 +71,14 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
 </div>
 
 <script>
-  const letters = document.querySelectorAll(".p-profesion");
+  const letters = document.querySelectorAll(".p-profession");
   letters.forEach((letter) => {
     letter.addEventListener("mouseenter", () => {
-      toogle(letter);
+      toggle(letter);
     });
   });
 
-  function toogle(letter) {
+  function toggle(letter) {
     letter.classList.add("bouncing");
     letter.addEventListener("animationend", () => {
       letter.classList.remove("bouncing");
@@ -138,7 +121,7 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     z-index: 0;
   }
 
-  .container-persentation {
+  .container-presentation {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -294,7 +277,7 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     justify-content: center;
   }
 
-  .photo-perfil {
+  .photo-profile {
     position: relative;
     display: flex;
     justify-content: center;
@@ -312,7 +295,7 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     /* border-radius: 64% 36% 29% 71% / 59% 79% 21% 41%; */
   }
 
-  .photo-perfil img {
+  .photo-profile img {
     position: relative;
     display: block;
     object-fit: cover;
@@ -326,7 +309,7 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     /* responsive*/
   }
   @media (max-width: 900px) {
-    .container-persentation {
+    .container-presentation {
       flex-direction: column-reverse;
       height: auto;
       gap: 30px;
@@ -338,7 +321,7 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
       justify-items: center;
       margin: 0;
     }
-    .photo-perfil {
+    .photo-profile {
       margin: 0;
     }
     .container-text {
